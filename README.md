@@ -9,4 +9,4 @@ Most of MobilityDataDev's projects share the same basic setup, namely:
 
 This repository contains the starter code/configuration for all of the above, to enable fast setup for new projects.
 
-Fork it or create your own copy by following the tutorial at https://mobilitydatadev.com/article/set-up-a-gtfs-app to get started on your own GTFS-based mobility app.
+Fork it now or create your own copy by following the tutorial at https://mobilitydatadev.com/article/setting-up-a-gtfs-app to get started on your own GTFS-based mobility app.

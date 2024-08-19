@@ -1,5 +1,3 @@
-version: '3.9'
-
 services:
   node-app-service:
     container_name: node-app-container
@@ -9,11 +7,11 @@ services:
       context: .
       dockerfile: Dockerfile
     environment:
-      - POSTGRES_HOST=postgresql-database-container
-      - POSTGRES_PORT=5432
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=root
+      POSTGRES_HOST: postgresql-database-container
+      POSTGRES_PORT: 5432
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: root
     command: sh -c "npm run dev"
     ports:
       - '4000:4000'
@@ -30,9 +28,9 @@ services:
     ports:
       - '5432:5432'
     environment:
-      - POSTGRES_USER=root
-      - POSTGRES_PASSWORD=root
-      - POSTGRES_DB=root
+      POSTGRES_USER: root
+      POSTGRES_PASSWORD: root
+      POSTGRES_DB: root
     volumes:
       - ./sample-data/:/docker-entrypoint-initdb.d/
       - local_pgdata:/var/lib/postgresql/data
